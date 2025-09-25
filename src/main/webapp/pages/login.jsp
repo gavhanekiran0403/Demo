@@ -1,5 +1,5 @@
 <%@page import="java.sql.*"%>
-<%@ include file="DBConnection.jsp" %>
+<%-- <%@ include file="DBConnection.jsp" %> --%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -127,7 +127,7 @@
             	PreparedStatement psmt = null;
     			
     			try{
-    				connection = getConnection();
+    				/* connection = getConnection(); */
     				String query = "SELECT * FROM USER WHERE email=? AND password=?";
     				psmt = connection.prepareStatement(query);
     				psmt.setString(1, email);
